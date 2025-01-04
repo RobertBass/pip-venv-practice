@@ -15,7 +15,7 @@ def run():
         print(f'{country} no se encuentra en la base de datos')
 
     filterContinent = df[df['Continent'] == continent]
-    countries, percentages = utils.getWorldPopulationPercentage2(filterContinent[:])
+    countries, percentages = utils.getWorldPopulationPercentage2(filterContinent.iloc[:])
     charts.generate_pie_chart(continent, countries, percentages)
 
     '''data = read_csv.read_csv('./app/data.csv') 
